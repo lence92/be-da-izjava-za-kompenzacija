@@ -1,0 +1,185 @@
+/*!
+ * Copyright (c) 2021. Lenche Petkovska
+ */
+
+/* Define mixin size - set the height and width */
+@mixin size($height, $width) {
+  width: $width;
+  height: $height;
+}
+
+/* Define push--auto */
+@mixin push--auto {
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+
+@mixin font-source-sans($size: false, $colour: false, $weight: false,  $lh: false) {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  @if $size { font-size: $size; }
+  @if $colour { color: $colour; }
+  @if $weight { font-weight: $weight; }
+  @if $lh { line-height: $lh; }
+}
+
+body {
+  @include font-source-sans();
+}
+
+.statement {
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  &--header {
+    border-bottom: 1px solid black;
+
+    .logo {
+      img {
+        @include size(100px, 210px);
+      }
+    }
+    .info {
+      @include font-source-sans(14px, false, 600);
+    }
+  }
+
+  &--body {
+    border-top: 2px solid black;
+    margin-top: 20px;
+    padding-top: 20px;
+
+    .receiver {
+      div {
+        @include font-source-sans(14px, false, 600);
+        white-space: nowrap;
+      }
+    }
+
+    .title {
+      margin-top: 10px;
+      div {
+        text-align: center;
+      }
+    }
+
+    .description {
+      margin-top: 20px;
+      div {
+        @include font-source-sans(12px);
+      }
+    }
+
+    .payment-info {
+      margin-top: 10px;
+      @include font-source-sans(14px);
+
+      &--line {
+        opacity: 1;
+        margin: 0;
+        height: 2px;
+      }
+    }
+
+    .date-signature {
+      margin-top: 20px;
+      @include font-source-sans(14px);
+
+      .signature {
+        // text-align: right;
+        padding-right: 0;
+
+        .compensation-proposer {
+          @include font-source-sans(false, false, 600);
+        }
+
+        .аuthorized-person {
+          margin-top: 10px;
+          padding-bottom: 40px;
+          border-bottom: 1px solid black;
+          width: 250px;
+        }
+      }
+    }
+
+    .warning {
+      margin-top: 60px;
+      @include font-source-sans(14px);
+    }
+
+    .compensation-agreement {
+      margin-top: 60px;
+      @include font-source-sans(14px);
+
+      div > .agreement-title {
+        margin-bottom: 20px;
+      }
+    }
+
+    .date-signature-bottom {
+      margin-top: 40px;
+      @include font-source-sans(14px);
+
+      .date-bottom, .signature-bottom {
+        border-bottom: 1px solid black;
+        padding-bottom: 40px;
+      }
+    }
+  }
+}
+
+@media print, (max-width: 991px) {
+  .statement {
+    @include font-source-sans(12px);
+
+    &--header {
+      .logo {
+        img {
+          @include size(70px, 180px);
+        }
+      }
+      .info {
+        @include font-source-sans(11px, false, 600);
+        margin-left: 20%;
+        width: 30%;
+      }
+    }
+    &--body {
+      .receiver {
+        div {
+          @include font-source-sans(11px, false, 600);
+        }
+      }
+      //.table {
+      //  @include font-source-sans(12px);
+      //}
+      .date-signature {
+        .signature .аuthorized-person {
+          padding-bottom: 30px;
+        }
+      }
+      .warning {
+        margin-top: 30px;
+      }
+      .compensation-agreement {
+        margin-top: 30px;
+        div {
+          width: 85%;
+        }
+      }
+      .date-signature-bottom {
+        margin-top: 30px;
+        .date-bottom, .signature-bottom {
+          padding-bottom: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media print {
+  .statement--body .date-signature .signature .аuthorized-person {
+    width: 200px;
+  }
+}

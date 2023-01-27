@@ -1,0 +1,136 @@
+<!--
+  ~ Copyright (c) 2021. Lenche Petkovska
+  -->
+
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8">
+    <title>Изјава за копмензација</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+
+    <!--   Bootstrap JS - script import -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container statement">
+        <div class="row statement--header">
+            <div class="col-6 logo">
+                <img src="assets/img/canva-photo-editor.png" alt="logo">
+            </div>
+            <div class="col-3 offset-3 info">
+                <div>БЕ-ДА Логистик Дооел</div>
+                <div>Адреса ул. 1550 бр. 20, Визбегово</div>
+                <div>ЕДБ: МК4075011501537</div>
+                <div>www.be-da.mk / info@be-da.mk</div>
+            </div>
+        </div>
+        <div class="row statement--body">
+            <div class="row receiver">
+                <div class="col-3 offset-9">
+                    <div>До Уни тракинг</div>
+                    <div>ул. Борис Кидрич бр. 26</div>
+                    <div>Гевгелија</div>
+                </div>
+            </div>
+            <div class="row title">
+                <div class="col-12">
+                    <h5>Изјава за копмензација 279/21</h5>
+                </div>
+            </div>
+            <div class="row description">
+                <div class="col-12">
+                    Врз основа на член 12 од Законот за Финансико работење и на основа на одредбите од членовите
+                    336-343 од Законот за облигациони односи даваме изјава за компензација на побарувањата и обврските
+                    во износ од:
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <table class="table table-bordered mt-4">
+                        <thead>
+                            <tr>
+                                <th scope="col" colspan="3" class="text-center">Наши побарувања с-ка 1200</th>
+                                <th scope="col" colspan="3" class="text-center">Ваши побарувања с-ка 1200</th>
+                            </tr>
+                            <tr>
+                                <th scope="col" class="text-center">Ф-ра бр.</th>
+                                <th scope="col" class="text-center">Датум</th>
+                                <th scope="col" class="text-center">Износ</th>
+                                <th scope="col" class="text-center">Ф-ра бр.</th>
+                                <th scope="col" class="text-center">Датум</th>
+                                <th scope="col" class="text-center">Износ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Овој tr таг треба да се повторува -->
+                            <tr>
+                                <!-- Наши - да се сменат со вариабли -->
+                                <td>2021-00769</td>
+                                <td>29.10.2021</td>
+                                <td>40,500.00</td>
+                                <!-- Ваши - да се сменат со вариабли -->
+                                <td>174/2021</td>
+                                <td>14.10.2021</td>
+                                <td>99.00</td>
+                            </tr>
+                            <tr>
+                                <td>ВКУПНО</td>
+                                <!-- Вкупно Наши - да се смени со вариабла -->
+                                <td colspan="2" class="text-end">461,349.00</td>
+                                <!-- Вкупно Ваши - да се смени со вариабла -->
+                                <td colspan="3" class="text-end">461,349.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row payment-info">
+                <div class="col-12">
+                    Разлика во износ од &nbsp; ден. ја платите
+                    <hr class="payment-info--line"/>
+                    во корист на жиро сметката
+                </div>
+            </div>
+            <div class="row date-signature">
+                <div class="col-6 date">
+                    <div>Датум 24.11.2021</div>
+                    <div>Скопје</div>
+                </div>
+                <div class="col-5 offset-1 signature">
+                    <div>Предлагач за копмензација</div>
+                    <div class="compensation-proposer">БЕ-ДА ЛОГИСТИК ДООЕЛ СКОПЈЕ</div>
+                    <div class="аuthorized-person">
+                        Овластено лице
+                    </div>
+                </div>
+            </div>
+            <div class="row warning">
+                <div class="col-12">
+                    НАПОМЕНА: Ве молиме компензацијата ве еден заверен примерок да ни ја вратите назад,
+                    доколку не ни одговорите во рок од 14 дена ќе ја сметаме за прифатена.
+                </div>
+            </div>
+            <div class="row compensation-agreement">
+                <div class="col-7">
+                    <div class="agreement-title">СОГЛАСНОСТ ЗА КОМПЕНЗАЦИЈА</div>
+                    <div>На основа на Вашата изјава за компензација,
+                        даваме согласност за нејзина примена за наведените меѓусебни побарувања и обврски.
+                    </div>
+                </div>
+            </div>
+            <div class="row date-signature-bottom">
+                <div class="col-3 date-bottom">
+                    Датум
+                </div>
+                <div class="col-3 offset-6 signature-bottom">
+                    Овластено лице
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
